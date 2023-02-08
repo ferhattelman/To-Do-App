@@ -1,25 +1,52 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './Components/Footer/index';
+import Header from './Components/Header/index';
+import List from './Components/List/index';
+import {
+    useState
+} from 'react';
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [todolist, setTodolist] = useState([])
+    const [situation, setSituation] = useState("All")
+    return ( <
+        div className = "App" >
+        <
+        Header todolist = {
+            todolist
+        }
+        setTodolist = {
+            setTodolist
+        }
+        /> <
+        List todolist = {
+            todolist
+        }
+        setTodolist = {
+            setTodolist
+        }
+        situation = {
+            situation
+        }
+        /> <
+        Footer situation = {
+            situation
+        }
+        setSituation = {
+            setSituation
+        }
+        todolist = {
+            todolist
+        }
+        setTodolist = {
+            setTodolist
+        }
+        /> <
+        /div>
+    );
 }
 
 export default App;
